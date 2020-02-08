@@ -12,12 +12,13 @@ let runningSum = function (nums) {
 // Remove Vowels from a String
 let removeVowels = function (S) {
     let arr = [];
-    const vowels = ["a", "e", "i", "o", "u"];
+    const vowels = 
+    ["a", "e", "i", "o", "u"];
     for (let i = 0; i < S.length; i++) {
         if (!vowels.includes(S[i])) {
             arr.push(S[i]);
         }
     }
-    
+
     return arr.join("");
 };
