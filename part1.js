@@ -18,5 +18,6 @@ let removeVowels = function (S) {
             arr.push(S[i]);
         }
     }
+    
     return arr.join("");
 };
