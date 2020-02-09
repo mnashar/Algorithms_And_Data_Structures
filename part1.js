@@ -22,3 +22,6 @@ let removeVowels = function (S) {
 
     return arr.join("");
 };
+
+// Kids With the Greatest Number of Candies
+const kidsWithCandies = (candies, extraCandies, max = Math.max(...candies)) => candies.map(candy => candy + extraCandies >= max);
