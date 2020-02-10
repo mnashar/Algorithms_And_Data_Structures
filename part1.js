@@ -33,7 +33,8 @@ const kidsWithCandies1 = (candies, extraCandies) => {
         val > max && (max = val);
     }
     for (
-        let i = 0; i < candies.length; ++i) {ret.push(candies[i] + extraCandies >= max);
+        let i = 0; i < candies.length; ++i) {
+            ret.push(candies[i] + extraCandies >= max);
     }
     return ret;
 };
