@@ -24,8 +24,17 @@ let removeVowels = function (S) {
 };
 
 // Kids With the Greatest Number of Candies
-const kidsWithCandies = (candies, extraCandies, max = Math.max(...candies)) => candies.map(candy => candy + extraCandies >= max);
+const kidsWithCandies3 = (candies, extraCandies, max = Math.max(...candies)) => candies.map(candy => candy + extraCandies >= max);
 
+const kidsWithCandies1 = (candies, extraCandies) => {
+    const ret = [];
+    let max = 0;
+    for (const val of candies) { val > max && (max = val);
+    }
+    for (let i = 0; i < candies.length; ++i) {ret.push(candies[i] + extraCandies >= max);
+    }
+    return ret;
+};
 
 //Shuffle the Array
 var shuffle = function (nums, n) {
