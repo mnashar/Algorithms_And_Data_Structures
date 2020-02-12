@@ -54,3 +54,7 @@ var shuffle = function (nums, n) {
     }
     return res;
 };
+
+function isSubstring(phrase, subphrase) {
+    return phrase.includes(subphrase);
+}
