@@ -97,7 +97,7 @@ function sumOfNPrimes(n) {
     while (countPrimes < n) {
         if (isPrime(i)) {
             sum += i;
-            countPrimes++;
+            countPrimes+=1;
         }
         i++;
     }
