@@ -120,3 +120,7 @@ function Elephant(name, height, tricks) {
     this.height = height;
     this.tricks = tricks;
 }
+
+Elephant.prototype.trumpet = function () {
+    console.log(`${this.name} the elephant goes 'phrRRRRRRRRRRR!!!!!!!'`);
+};
