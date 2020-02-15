@@ -128,3 +128,7 @@ Elephant.prototype.trumpet = function () {
 Elephant.prototype.grow = function () {
     this.height = this.height + 12;
 };
+
+Elephant.prototype.addTrick = function (trick) {
+    this.tricks.push(trick);
+};
