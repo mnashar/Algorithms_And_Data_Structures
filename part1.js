@@ -132,3 +132,8 @@ Elephant.prototype.grow = function () {
 Elephant.prototype.addTrick = function (trick) {
     this.tricks.push(trick);
 };
+
+Elephant.prototype.play = function () {
+    trickIndex = Math.floor(Math.random() * this.tricks.length);
+    console.log(`${this.name} is ${this.tricks[trickIndex]}!`);
+};
