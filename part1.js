@@ -137,3 +137,7 @@ Elephant.prototype.play = function () {
     trickIndex = Math.floor(Math.random() * this.tricks.length);
     console.log(`${this.name} is ${this.tricks[trickIndex]}!`);
 };
+
+Elephant.paradeHelper = function (elephant) {
+    console.log(`${elephant.name} is trotting by!`);
+};
