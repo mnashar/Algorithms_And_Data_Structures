@@ -141,3 +141,13 @@ Elephant.prototype.play = function () {
 Elephant.paradeHelper = function (elephant) {
     console.log(`${elephant.name} is trotting by!`);
 };
+
+function dinerBreakfast() {
+    let order = "I'd like cheesy scrambled eggs please.";
+    console.log(order);
+
+    return function (food) {
+        order = `${order.slice(0, order.length - 8)} and ${food} please.`;
+        console.log(order);
+    };
+};
