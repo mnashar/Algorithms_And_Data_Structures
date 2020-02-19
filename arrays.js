@@ -66,8 +66,7 @@ Array.prototype.transpose = function () {
     // this creates the empty transposed array
     // just a neat trick to avoid iterating
     const columns = Array.from(
-        { length: this[0].length },
-        () => Array.from({ length: this.length })
+        { length: this[0].length },() => Array.from({ length: this.length })
     );
 
     for (let i = 0; i < this.length; i++) {
