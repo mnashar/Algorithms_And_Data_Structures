@@ -86,3 +86,7 @@ Array.prototype.myEach = function (func) {
         func(this[i]);
     }
 };
+
+NUMS.myEach((num) => {
+    console.log(`square of ${num} is ${num * num}`);
+});
