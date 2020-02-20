@@ -77,3 +77,12 @@ Array.prototype.transpose = function () {
 
     return columns;
 };
+
+const NUMS = [1, 2, 3, 4, 5];
+
+// Array#myEach
+Array.prototype.myEach = function (func) {
+    for (let i = 0; i < this.length; i++) {
+        func(this[i]);
+    }
+};
