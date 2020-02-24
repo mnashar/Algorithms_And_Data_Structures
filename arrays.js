@@ -99,3 +99,19 @@ Array.prototype.myMap = function (func) {
 
     return mappedArray;
 };
+
+Array.prototype.myReduce = function (func, initialValue) {
+
+    let arr = this;
+
+    if (initialValue === undefined) {
+        initialValue = arr[0];
+        arr = arr.slice(1);
+    }
+
+    let result = initialValue;
+
+    arr.myEach(el => result = func(result, el));
+
+    return result;
+};
