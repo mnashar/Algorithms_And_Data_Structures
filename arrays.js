@@ -120,7 +120,11 @@ Array.prototype.bubbleSort = function () {
     let isSorted = false;
 
     while (!isSorted) {
-       
+        isSorted = true;
+
+        for (let i = 0; i < (this.length - 1); i++) {
+            
+        }
     }
 
     return this;
