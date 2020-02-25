@@ -123,6 +123,8 @@ Array.prototype.bubbleSort = function () {
         isSorted = true;
 
         for (let i = 0; i < (this.length - 1); i++) {
+            // a crafty bit of array destructuring to avoid a temp variable
+
             if (this[i] > this[i + 1]) {
                 [this[i], this[i + 1]] = [this[i + 1], this[i]];
                 isSorted = false;
