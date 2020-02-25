@@ -117,6 +117,11 @@ Array.prototype.myReduce = function (func, initialValue) {
 };
 
 Array.prototype.bubbleSort = function () {
-   
+    let isSorted = false;
+
+    while (!isSorted) {
+       
+    }
+
     return this;
 };
