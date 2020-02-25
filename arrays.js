@@ -134,3 +134,5 @@ Array.prototype.bubbleSort = function () {
 
     return this;
 };
+
+console.log([55,67,1,0,32].bubbleSort());
