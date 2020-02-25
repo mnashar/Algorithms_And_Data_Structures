@@ -123,7 +123,9 @@ Array.prototype.bubbleSort = function () {
         isSorted = true;
 
         for (let i = 0; i < (this.length - 1); i++) {
-            
+            if (this[i] > this[i + 1]) {
+                
+            }
         }
     }
 
