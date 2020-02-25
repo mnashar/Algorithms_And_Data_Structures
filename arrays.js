@@ -136,3 +136,9 @@ Array.prototype.bubbleSort = function () {
 };
 
 console.log([55,67,100,44,1,0,32].bubbleSort());
+
+String.prototype.substrings = function () {
+    
+
+    return substrings;
+};
