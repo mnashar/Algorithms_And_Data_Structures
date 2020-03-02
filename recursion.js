@@ -39,5 +39,9 @@ function exp1(base, exponent) {
 }
 
 function exp2(base, exponent) {
-   
+    if (exponent === 0) {
+        return 1;
+    }
+
+    
 }
