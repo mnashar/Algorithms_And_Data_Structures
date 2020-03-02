@@ -47,7 +47,8 @@ function exp2(base, exponent) {
         let subAnswer = exp2(base, exponent / 2);
         return subAnswer * subAnswer;
     } else {
-        
+        let subAnswer = exp2(base, ((exponent - 1) / 2));
+        return subAnswer * subAnswer * base;
     }
     
 }
