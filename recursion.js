@@ -32,3 +32,8 @@ function sumIter(numbers) {
     return sum;
     // return reducedSum;
 }
+
+// exp1, exp2
+function exp1(base, exponent) {
+    return exponent === 0 ? 1 : (base * exp1(base, exponent - 1));
+}
