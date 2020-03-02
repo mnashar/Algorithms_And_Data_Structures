@@ -43,5 +43,10 @@ function exp2(base, exponent) {
         return 1;
     }
 
+    if (exponent % 2 === 0) {
+        
+    } else {
+        
+    }
     
 }
