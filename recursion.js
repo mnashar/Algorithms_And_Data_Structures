@@ -37,3 +37,7 @@ function sumIter(numbers) {
 function exp1(base, exponent) {
     return exponent === 0 ? 1 : (base * exp1(base, exponent - 1));
 }
+
+function exp2(base, exponent) {
+   
+}
