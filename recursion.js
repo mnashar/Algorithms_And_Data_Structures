@@ -44,7 +44,8 @@ function exp2(base, exponent) {
     }
 
     if (exponent % 2 === 0) {
-        
+        let subAnswer = exp2(base, exponent / 2);
+        return subAnswer * subAnswer;
     } else {
         
     }
