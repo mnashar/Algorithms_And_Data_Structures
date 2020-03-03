@@ -52,3 +52,14 @@ function exp2(base, exponent) {
     }
     
 }
+
+function fibsRec(n) {
+    if (n < 3) {
+        return [0, 1].slice(0, n);
+    }
+
+    let fibs = fibsRec(n - 1);
+    fibs.push(fibs[fibs.length - 1] + fibs[fibs.length - 2]);
+
+    return fibs;
+}
