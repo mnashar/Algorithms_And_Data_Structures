@@ -76,3 +76,12 @@ function fibsIter(n) {
 
     return fibs;
 }
+
+function deepDup(arr) {
+    if (!(arr instanceof Array)) {
+        return arr;
+    }
+    return arr.map((el) => {
+        return deepDup(el);
+    });
+}
