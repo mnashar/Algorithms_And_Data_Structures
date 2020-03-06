@@ -85,3 +85,24 @@ function deepDup(arr) {
         return deepDup(el);
     });
 }
+
+function bsearch(numbers, target) {
+    if (numbers.length === 0) {
+        return -1;
+    }
+
+    const probeIdx = Math.floor(numbers.length / 2);
+    const probe = numbers[probeIdx];
+
+    if (target === probe) {
+        return probeIdx;
+    } else if (target < probe) {
+        const left = numbers.slice(0, probeIdx);
+        return bsearch(left, target);
+    } else {
+        const right = numbers.slice(probeIdx + 1);
+        const subProblem = bsearch(right, target);
+
+        return subProblem === -1 ? -1 : subProblem + (probeIdx + 1);
+    }
+}
