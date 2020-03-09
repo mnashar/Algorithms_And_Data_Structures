@@ -106,3 +106,14 @@ function bsearch(numbers, target) {
         return subProblem === -1 ? -1 : subProblem + (probeIdx + 1);
     }
 }
+
+function merge(left, right) {
+    const merged = [];
+
+    while (left.length > 0 && right.length > 0) {
+        let nextItem = (left[0] < right[0]) ? left.shift() : right.shift();
+        merged.push(nextItem);
+    }
+
+    return merged.concat(left, right);
+}
