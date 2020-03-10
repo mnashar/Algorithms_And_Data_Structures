@@ -117,3 +117,16 @@ function merge(left, right) {
 
     return merged.concat(left, right);
 }
+
+function mergeSort(array) {
+    if (array.length < 2) {
+        return array;
+    } else {
+        const middle = Math.floor(array.length / 2);
+
+        const left = mergeSort(array.slice(0, middle));
+        const right = mergeSort(array.slice(middle));
+
+        return merge(left, right);
+    }
+}
