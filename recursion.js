@@ -137,4 +137,6 @@ function subsets(array) {
     }
 
     const first = array[0];
+    const withoutFirst = subsets(array.slice(1));
+
 }
