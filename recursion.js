@@ -140,5 +140,7 @@ function subsets(array) {
     const withoutFirst = subsets(array.slice(1));
     const withFirst = withoutFirst.map(sub => [first].concat(sub));
 
+    return withoutFirst.concat(withFirst);
+
 
 }
