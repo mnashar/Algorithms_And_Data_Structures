@@ -136,5 +136,5 @@ function subsets(array) {
         return [[]];
     }
 
-   
+    const first = array[0];
 }
