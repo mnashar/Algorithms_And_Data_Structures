@@ -130,3 +130,11 @@ function mergeSort(array) {
         return merge(left, right);
     }
 }
+
+function subsets(array) {
+    if (array.length === 0) {
+        return [[]];
+    }
+
+   
+}
