@@ -6,3 +6,8 @@ function Cat(name, owner) {
 Cat.prototype.cuteStatement = function () {
     return `${this.owner} loves ${this.name}. :3`;
 };
+
+
+Cat.prototype.cuteStatement = function () {
+    return `Everyone loves ${this.name}!`;
+};
