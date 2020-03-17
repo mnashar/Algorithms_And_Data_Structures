@@ -4,3 +4,7 @@ function Student(fname, lname) {
     this.lname = lname;
     this.courses = [];
 }
+
+Student.prototype.name = function () {
+    return `${this.fname} ${this.lname}`;
+};
