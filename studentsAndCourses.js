@@ -24,5 +24,7 @@ Student.prototype.enroll = function (course) {
 
 Student.prototype.courseLoad = function () {
     const courseLoad = {};
-    
+    this.courses.forEach(course => {
+        
+    });
 };
