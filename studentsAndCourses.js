@@ -21,3 +21,7 @@ Student.prototype.enroll = function (course) {
         course.addStudent(this);
     }
 };
+
+Student.prototype.courseLoad = function () {
+    
+};
