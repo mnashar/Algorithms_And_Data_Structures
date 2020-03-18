@@ -25,6 +25,8 @@ Student.prototype.enroll = function (course) {
 Student.prototype.courseLoad = function () {
     const courseLoad = {};
     this.courses.forEach(course => {
-        
+        let dpt = course.department;
+        courseLoad[dpt] = courseLoad[dpt] || 0;
+        courseLoad[dpt] += course.credits;
     });
 };
