@@ -29,4 +29,7 @@ Student.prototype.courseLoad = function () {
         courseLoad[dpt] = courseLoad[dpt] || 0;
         courseLoad[dpt] += course.credits;
     });
+
+    return courseLoad;
+
 };
