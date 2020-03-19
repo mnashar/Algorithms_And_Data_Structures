@@ -33,3 +33,12 @@ Student.prototype.courseLoad = function () {
     return courseLoad;
 
 };
+
+function Course(name, department, credits, days, block) {
+    this.name = name;
+    this.department = department;
+    this.credits = credits;
+    this.days = days;
+    this.block = block;
+    this.students = [];
+}
