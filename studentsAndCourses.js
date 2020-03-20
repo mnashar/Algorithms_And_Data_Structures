@@ -42,3 +42,10 @@ function Course(name, department, credits, days, block) {
     this.block = block;
     this.students = [];
 }
+
+Course.prototype.addStudent = function (student) {
+    if (this.students.indexOf(student) === -1) {
+        this.students.push(student);
+        student.enroll(this);
+    }
+};
