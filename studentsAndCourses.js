@@ -49,3 +49,10 @@ Course.prototype.addStudent = function (student) {
         student.enroll(this);
     }
 };
+
+Course.prototype.conflictsWith = function (other) {
+    if (this.block !== other.block) { return false; }
+
+    return this.days.some(day => other.days.indexOf(day) !== -1);
+};
+
