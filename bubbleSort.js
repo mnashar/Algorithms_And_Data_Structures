@@ -6,5 +6,10 @@ const reader = readline.createInterface({
 });
 
 function askIfGreaterThan(el1, el2, callback) {
-    
+    reader.question(
+        "Is " + el1 + " greater than " + el2 + "?: ",
+        function (answer) {
+            
+        }
+    );
 }
