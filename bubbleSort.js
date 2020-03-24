@@ -26,5 +26,17 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
         return;
     }
 
-    
+    askIfGreaterThan(arr[i], arr[i + 1], function (isGreaterThan) {
+        if (isGreaterThan) {
+            const tmp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = tmp;
+
+            madeAnySwaps = true;
+        }
+
+        innerBubbleSortLoop(
+            arr, i + 1, madeAnySwaps, outerBubbleSortLoop
+        );
+    });
 }
