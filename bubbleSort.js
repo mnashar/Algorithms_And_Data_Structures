@@ -17,3 +17,14 @@ function askIfGreaterThan(el1, el2, callback) {
         }
     );
 }
+
+function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
+   
+    if (i == (arr.length - 1)) {
+        // End of array reached.
+        outerBubbleSortLoop(madeAnySwaps);
+        return;
+    }
+
+    
+}
