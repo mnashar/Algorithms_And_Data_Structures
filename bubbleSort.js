@@ -40,3 +40,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
         );
     });
 }
+
+function absurdBubbleSort(arr, sortCompletionCallback) {
+    
+}
