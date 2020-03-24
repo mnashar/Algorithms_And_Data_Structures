@@ -50,4 +50,6 @@ function absurdBubbleSort(arr, sortCompletionCallback) {
         }
         
     }
+    outerBubbleSortLoop(true);
+
 }
