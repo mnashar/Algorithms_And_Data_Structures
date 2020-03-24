@@ -42,5 +42,8 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
 }
 
 function absurdBubbleSort(arr, sortCompletionCallback) {
-    
+    function outerBubbleSortLoop(madeAnySwaps) {
+        
+        
+    }
 }
