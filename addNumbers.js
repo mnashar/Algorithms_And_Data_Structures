@@ -16,6 +16,7 @@ function addNumbers(sum, numsLeft, completionCallback) {
             addNumbers(sum, numsLeft - 1, completionCallback);
         });
     } else {
-        
+        completionCallback(sum);
+
     }
 }
