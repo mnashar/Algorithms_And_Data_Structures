@@ -15,6 +15,15 @@ class Clock {
         setInterval(this._tick.bind(this), 1000);
     }
 
+    printTime() {
+        // Format the time in HH:MM:SS
+        const timeString = [this.hours, this.minutes, this.seconds].join(":");
+
+        // Use console.log to print it.
+        console.log(timeString);
+    }
+
+  
 }
 
 const clock = new Clock();
