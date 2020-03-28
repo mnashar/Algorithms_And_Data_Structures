@@ -31,7 +31,14 @@ class Clock {
         this.printTime();
     }
 
-   
+    _incrementSeconds() {
+        // 1. Increment the time by one second.
+        this.seconds += 1;
+        if (this.seconds === 60) {
+            this.seconds = 0;
+            this._incrementMinutes();
+        }
+    }
 
   
 }
