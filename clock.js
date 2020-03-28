@@ -23,6 +23,16 @@ class Clock {
         console.log(timeString);
     }
 
+    _tick() {
+        // 1. Increment the time by one second.
+        this._incrementSeconds();
+
+        // 2. Call printTime.
+        this.printTime();
+    }
+
+   
+
   
 }
 
