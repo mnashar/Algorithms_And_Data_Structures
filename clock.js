@@ -42,6 +42,7 @@ class Clock {
 
     _incrementMinutes() {
         this.minutes += 1;
+        
         if (this.minutes === 60) {
             this.minutes = 0;
             this._incrementHours();
