@@ -18,6 +18,11 @@ class Game {
         }
     }
 
+    isWon() {
+        // move all the discs to the last or second tower
+        return (this.towers[2].length == 3) || (this.towers[1].length == 3);
+    }
+
 }
 
 module.exports = Game;
