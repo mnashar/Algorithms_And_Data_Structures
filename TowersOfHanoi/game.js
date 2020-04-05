@@ -23,6 +23,16 @@ class Game {
         return (this.towers[2].length == 3) || (this.towers[1].length == 3);
     }
 
+    move(startTowerIdx, endTowerIdx) {
+        if (this.isValidMove(startTowerIdx, endTowerIdx)) {
+            this.towers[endTowerIdx].push(this.towers[startTowerIdx].pop());
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+   
 }
 
 module.exports = Game;
