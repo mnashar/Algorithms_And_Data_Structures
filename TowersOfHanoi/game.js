@@ -47,7 +47,15 @@ class Game {
         });
     }
 
-   
+    run(reader, gameCompletionCallback) {
+        this.promptMove(reader, (startTowerIdx, endTowerIdx) => {
+            if (!this.move(startTowerIdx, endTowerIdx)) {
+                console.log("Invalid move!");
+            }
+
+            
+        });
+    }
 }
 
 module.exports = Game;
