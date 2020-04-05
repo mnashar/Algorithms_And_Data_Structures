@@ -53,7 +53,14 @@ class Game {
                 console.log("Invalid move!");
             }
 
-            
+            if (!this.isWon()) {
+                // Continue to play!
+                this.run(reader, gameCompletionCallback);
+            } else {
+                this.print();
+                console.log("You win!");
+                gameCompletionCallback();
+            }
         });
     }
 }
