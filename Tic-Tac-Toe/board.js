@@ -29,6 +29,15 @@ class Board {
         return true;
     }
 
+    placeMark(pos, mark) {
+        if (!this.isEmptyPos(pos)) {
+            throw new MoveError('Is not an empty position!');
+        }
+
+        this.grid[pos[0]][pos[1]] = mark;
+    }
+
+
 }
 
 
