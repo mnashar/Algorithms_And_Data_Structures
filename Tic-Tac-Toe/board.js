@@ -52,6 +52,31 @@ class Board {
         console.log(strs.join('-----\n'));
     }
 
+    winner() {
+        const posSeqs = [
+            // horizontals
+            [[0, 0], [0, 1], [0, 2]],
+            [[1, 0], [1, 1], [1, 2]],
+            [[2, 0], [2, 1], [2, 2]],
+            // verticals
+            [[0, 0], [1, 0], [2, 0]],
+            [[0, 1], [1, 1], [2, 1]],
+            [[0, 2], [1, 2], [2, 2]],
+            // diagonals
+            [[0, 0], [1, 1], [2, 2]],
+            [[2, 0], [1, 1], [0, 2]]
+        ];
+
+        for (let i = 0; i < posSeqs.length; i++) {
+            const winner = this.winnerHelper(posSeqs[i]);
+            if (winner != null) {
+                return winner;
+            }
+        }
+
+        return null;
+    }
+
 }
 
 
