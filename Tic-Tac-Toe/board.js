@@ -77,6 +77,27 @@ class Board {
         return null;
     }
 
+    winnerHelper(posSeq) {
+        for (let markIdx = 0; markIdx < Board.marks.length; markIdx++) {
+            const targetMark = Board.marks[markIdx];
+            let winner = true;
+            for (let posIdx = 0; posIdx < 3; posIdx++) {
+                const pos = posSeq[posIdx];
+                const mark = this.grid[pos[0]][pos[1]];
+
+                if (mark != targetMark) {
+                    winner = false;
+                }
+            }
+
+            if (winner) {
+                return targetMark;
+            }
+        }
+
+        return null;
+    }
+
 }
 
 
