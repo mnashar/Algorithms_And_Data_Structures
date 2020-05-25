@@ -31,6 +31,33 @@ class Game {
         });
     }
 
+    run(reader, gameCompletionCallback) {
+        this.promptMove(reader, move => {
+            try {
+                this.playMove(move);
+            } catch (e) {
+                if (e instanceof MoveError) {
+                    console.log(e.msg);
+                } else {
+                    throw e;
+                }
+            }
+
+            if (this.isOver()) {
+                this.board.print();
+                if (this.winner()) {
+                    console.log(`${this.winner()} has won!`);
+                } else {
+                    console.log('NO ONE WINS!');
+                }
+                gameCompletionCallback();
+            } else {
+                // continue loop
+                this.run(reader, gameCompletionCallback);
+            }
+        });
+    }
+
 }
 
 module.exports = Game;
