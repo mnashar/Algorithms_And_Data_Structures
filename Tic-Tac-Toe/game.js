@@ -46,7 +46,7 @@ class Game {
             if (this.isOver()) {
                 this.board.print();
                 if (this.winner()) {
-                    console.log(`${this.winner()} has won!`);
+                    console.log(`${this.winner()} has won!!!`);
                 } else {
                     console.log('NO ONE WINS!');
                 }
