@@ -16,6 +16,21 @@ class Game {
         this.swapTurn();
     }
 
+    promptMove(reader, callback) {
+        const game = this;
+
+        this.board.print();
+        console.log(`Current Turn: ${this.currentPlayer}`);
+
+        reader.question('Enter rowIdx: ', rowIdxStr => {
+            const rowIdx = parseInt(rowIdxStr);
+            reader.question('Enter colIdx: ', colIdxStr => {
+                const colIdx = parseInt(colIdxStr);
+                callback([rowIdx, colIdx]);
+            });
+        });
+    }
+
 }
 
 module.exports = Game;
