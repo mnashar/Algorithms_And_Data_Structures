@@ -66,6 +66,9 @@ class Game {
         }
     }
 
+    winner() {
+        return this.board.winner();
+    }
 }
 
 module.exports = Game;
