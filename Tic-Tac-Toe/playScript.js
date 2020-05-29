@@ -8,3 +8,13 @@ const reader = readline.createInterface({
 let g = new Game();
 g.run(reader, completion);
 
+function completion() {
+    reader.question("Play again? y or n: ", restartGame => {
+        if (restartGame === "y") {
+            g = new Game();
+            g.run(reader, completion);
+        } else {
+            reader.close();
+        }
+    });
+};
