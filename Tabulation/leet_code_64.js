@@ -4,5 +4,9 @@ function minPathSum(grid) {
     let table = new Array(m).fill().map(() => new Array(n).fill(Infinity));
     table[0][0] = grid[0][0];
 
+    for (let i = 0; i < m; i++) {
+        
+    }
+
    
 }
