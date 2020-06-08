@@ -5,8 +5,14 @@ function minPathSum(grid) {
     table[0][0] = grid[0][0];
 
     for (let i = 0; i < m; i++) {
-        
+        for (let j = 0; j < n; j++) {
+            if (i < m - 1) {
+                table[i + 1][j] = Math.min(table[i][j] + grid[i + 1][j], table[i + 1][j]);
+            }
+            if (j < n - 1) {
+                table[i][j + 1] = Math.min(table[i][j] + grid[i][j + 1], table[i][j + 1]);
+            }
+        }
     }
 
-   
 }
