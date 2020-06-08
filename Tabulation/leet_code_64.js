@@ -15,4 +15,5 @@ function minPathSum(grid) {
         }
     }
 
+    return table[m ][n ];
 }
