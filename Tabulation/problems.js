@@ -49,3 +49,19 @@ function maxNonAdjacentSum(nums) {
 
     return table[table.length - 1];
 }
+
+// memoized
+function maxNonAdjacentSum(nums, start = 0, end = nums.length - 1, memo = {}) {
+    let key = start + ',' + end;
+    if (key in memo) return memo[key];
+    if (start > end) return 0;
+
+    let ways = [];
+    for (let i = start; i <= end; i++) {
+        let amt = nums[i];
+        ways.push(amt + maxNonAdjacentSum(nums, start, i - 2, memo) + maxNonAdjacentSum(nums, i + 2, end, memo));
+    }
+
+    memo[key] = Math.max(...ways);
+    return memo[key];
+}
