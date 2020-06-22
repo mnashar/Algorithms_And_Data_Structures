@@ -94,3 +94,10 @@ function minChange(coins, amount) {
 
     return table[amount];
 }
+
+
+module.exports = {
+    stepper,
+    maxNonAdjacentSum,
+    minChange
+};
