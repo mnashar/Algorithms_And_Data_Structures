@@ -97,6 +97,20 @@ class LinkedList {
         return false;
     }
 
+    insert(index, val) {
+        if (index < 0 || index >= this.length) return false;
+        if (index === this.length) return !!this.addToTail(val);
+        if (index === 0) return !!this.addToHead(val);
+
+        const newNode = new Node(val);
+        const prev = this.get(index - 1);
+        const temp = prev.next;
+        prev.next = newNode;
+        newNode.next = temp;
+        this.length++;
+        return true;
+    }
+
    
 }
 
