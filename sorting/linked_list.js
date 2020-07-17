@@ -77,6 +77,17 @@ class LinkedList {
         return false;
     }
 
+    get(index) {
+        if (index < 0 || index >= this.length) return null;
+        let counter = 0;
+        let current = this.head;
+        while (counter !== index) {
+            current = current.next;
+            counter++;
+        }
+        return current;
+    }
+
     
 }
 
