@@ -68,7 +68,16 @@ class LinkedList {
         return currentHead;
     }
 
-   
+    contains(target) {
+        let node = this.head;
+        while (node) {
+            if (node.value === target) return true;
+            node = node.next;
+        }
+        return false;
+    }
+
+    
 }
 
 exports.Node = Node;
