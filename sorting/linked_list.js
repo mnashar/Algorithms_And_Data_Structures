@@ -122,7 +122,9 @@ class LinkedList {
         return removed;
     }
 
-  
+    size() {
+        return this.length;
+    }
 }
 
 exports.Node = Node;
