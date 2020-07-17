@@ -88,7 +88,16 @@ class LinkedList {
         return current;
     }
 
-    
+    set(index, val) {
+        const foundNode = this.get(index);
+        if (foundNode) {
+            foundNode.value = val;
+            return true;
+        }
+        return false;
+    }
+
+   
 }
 
 exports.Node = Node;
