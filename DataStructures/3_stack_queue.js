@@ -60,6 +60,20 @@ class StackQueue {
         this.back = null;
     }
 
+    enqueue(val) {
+        const newQueueNode = new Node(val);
+        if (!this.front) {
+            this.front = newQueueNode;
+            this.back = newQueueNode;
+        } else {
+            this.back.next = newQueueNode;
+            this.back = newQueueNode;
+        }
+
+        this.inStack.push(new Node(newQueueNode.value));
+        return this.size();
+    }
+
    
 };
 
