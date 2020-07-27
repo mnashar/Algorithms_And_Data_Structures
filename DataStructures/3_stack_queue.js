@@ -46,5 +46,20 @@ class Stack {
         return temp;
     }
 
+    size() {
+        return this.length;
+    }
+}
+
+class StackQueue {
+    // TODO: Implement the StackQueue class!
+    constructor() {
+        this.inStack = new Stack();
+        this.outStack = new Stack();
+        this.front = null;
+        this.back = null;
+    }
+
+   
 };
 
