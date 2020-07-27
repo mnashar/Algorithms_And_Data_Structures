@@ -98,3 +98,6 @@ class StackQueue {
     }
 };
 
+exports.Node = Node;
+exports.Stack = Stack;
+exports.StackQueue = StackQueue;
