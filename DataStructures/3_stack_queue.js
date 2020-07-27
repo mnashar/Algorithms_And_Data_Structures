@@ -74,6 +74,27 @@ class StackQueue {
         return this.size();
     }
 
-   
+    dequeue() {
+        if (!this.front) {
+            return null;
+        } else if (this.size() === 1) {
+            this.front = null;
+            this.back = null;
+        } else {
+            this.front = this.front.next;
+        }
+
+        if (this.outStack.size() === 0) {
+            while (this.inStack.size() > 0) {
+                this.outStack.push(this.inStack.pop());
+            }
+        }
+        let x = this.outStack.pop();
+        return x;
+    }
+
+    size() {
+        return this.inStack.size() + this.outStack.size();
+    }
 };
 
