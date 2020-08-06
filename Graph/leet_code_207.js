@@ -15,3 +15,26 @@ function buildGraph(edges) {
 
     return graph;
 }
+
+function canFinish(numCourses, prerequisites) {
+    let graph = buildGraph(prerequisites);
+
+    let totalCourses = Object.keys(graph).length;
+
+    let visited = new Set();
+
+    let eligibleNodeExists = true;
+    while (eligibleNodeExists) {
+        eligibleNodeExists = false;
+
+        for (let node in graph) {
+            let isEveryParentVisited = graph[node].every((parent) => visited.has(parent));
+            if (!visited.has(node) && isEveryParentVisited) {
+                eligibleNodeExists = true;
+                visited.add(node);
+            }
+        }
+
+    }
+    return visited.size == totalCourses;
+}
