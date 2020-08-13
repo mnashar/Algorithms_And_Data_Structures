@@ -10,6 +10,6 @@ class Trie {
         this.root = new Node();
     }
 
-   
+    
 }
 
