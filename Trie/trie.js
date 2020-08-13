@@ -56,6 +56,22 @@ class Trie {
         }
     }
 
+    searchIter(word) {
+        let node = this.root;
+        
+        for (let i = 0; i < word.length; i++) {
+            let letter = word[i];
+
+            if (!(letter in node.children)) {
+                return false;
+            }
+
+            node = node.children[letter];
+        }
+
+        return node.isTerminal;
+    }
+
   
 }
 
