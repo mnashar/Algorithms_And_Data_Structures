@@ -94,6 +94,7 @@ class Trie {
             if (child === undefined) {
                 return [];
             } else {
+                
                 let suffixes = this.wordsWithPrefix(prefix.slice(1), root.children[firstLetter]);
                 return suffixes.map(suffix => firstLetter + suffix);
             }
