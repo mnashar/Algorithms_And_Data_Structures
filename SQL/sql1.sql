@@ -12,3 +12,12 @@ SELECT person_name
 FROM (SELECT person_name, SUM(weight) OVER (ORDER BY turn) AS cumulative_weight FROM Queue) qc
 WHERE cumulative_weight <= 1000
 ORDER BY cumulative_weight DESC LIMIT 1;
+
+
+SELECT
+ gender,
+ day,
+ SUM(score_points) OVER (partition by gender order by day) as total
+FROM scores
+GROUP BY gender, day
+ORDER BY gender, day;
