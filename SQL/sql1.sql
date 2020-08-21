@@ -31,3 +31,23 @@ Patients
 where
 conditions like '%DIAB1%'
 order by patient_id
+
+
+# Write your MySQL query statement below
+select 
+Product.product_id , Product.product_name 
+from
+Product
+
+
+where Product.product_id not in (
+
+select product_id
+from
+Sales where sale_date not between '2019-01-01' and '2019-03-31'
+
+) 
+
+
+
+
