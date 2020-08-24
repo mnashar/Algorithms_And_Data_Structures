@@ -49,5 +49,16 @@ Sales where sale_date not between '2019-01-01' and '2019-03-31'
 ) 
 
 
+select distinct buyer_id
+from Sales  join product
+ on sales.product_id=product.product_id
 
+where buyer_id not in 
+
+(select buyer_id
+from Sales join product
+ on sales.product_id=product.product_id
+where product_name='iPhone')
+
+and  product_name='S8';
 
