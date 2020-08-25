@@ -63,6 +63,22 @@ where product_name='iPhone')
 and  product_name='S8';
 
 
+select seller_id
+from sales
+group by seller_id
+having sum(price)=
+
+(
+    select max(summ)
+from
+(
+select seller_id,sum(price) as summ
+from Sales
+group by seller_id
+    ) as summ_table
+    );
+
+
 https://www.youtube.com/watch?v=KaPvDalVkZs
 https://www.youtube.com/watch?v=IVMfDpCGwK4
 https://www.youtube.com/watch?v=TzsrO4zTQj8
