@@ -88,6 +88,14 @@ GROUP BY seller_id) s
 WHERE s.rk = 1;
 
 
+select player_id,event_date,
+sum(games_played) over (partition by player_id order by event_date ) games_played_so_far
+from Activity;
+
+
+
+
+
 https://www.youtube.com/watch?v=KaPvDalVkZs
 https://www.youtube.com/watch?v=IVMfDpCGwK4
 https://www.youtube.com/watch?v=TzsrO4zTQj8
