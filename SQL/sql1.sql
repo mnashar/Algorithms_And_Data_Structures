@@ -93,6 +93,10 @@ sum(games_played) over (partition by player_id order by event_date ) games_playe
 from Activity;
 
 
+select id,movie,description,rating
+from cinema
+where id%2=1 and description not like '%boring%'
+Order by rating desc;
 
 
 
