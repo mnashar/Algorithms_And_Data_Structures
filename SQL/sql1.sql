@@ -79,6 +79,15 @@ group by seller_id
     );
 
 
+    SELECT seller_id
+FROM
+(SELECT seller_id,
+RANK() OVER (ORDER BY SUM(price) DESC) rk
+FROM sales
+GROUP BY seller_id) s
+WHERE s.rk = 1;
+
+
 https://www.youtube.com/watch?v=KaPvDalVkZs
 https://www.youtube.com/watch?v=IVMfDpCGwK4
 https://www.youtube.com/watch?v=TzsrO4zTQj8
