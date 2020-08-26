@@ -113,6 +113,21 @@ group by ManagerId
 on manager.id=managed.ManagerId
 ;
 
+select manager.name
+from Employee as manager
+
+join
+(
+select ManagerId,count(ManagerId) cc
+from Employee
+group by ManagerId
+ having   count(ManagerId)>=5
+) managed
+on manager.id=managed.ManagerId;
+
+
+
+
 
 https://www.youtube.com/watch?v=KaPvDalVkZs
 https://www.youtube.com/watch?v=IVMfDpCGwK4
